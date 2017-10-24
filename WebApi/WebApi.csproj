@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F920245-EA2D-40CE-AA66-C8F0B2AEEFEF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApi</RootNamespace>
+    <AssemblyName>WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\BetsController.cs" />
+    <Compile Include="Dto\EndedStakesFiltersDto.cs" />
+    <Compile Include="Dto\BaseUserBetDto.cs" />
+    <Compile Include="Dto\ItUserBetDto.cs" />
+    <Compile Include="Dto\MappingHelpers\EndedStakesFiltersHelper.cs" />
+    <Compile Include="Dto\TaxInfoDto.cs" />
+    <Compile Include="Dto\UserBetDto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="UserBetDtoBuilder\Base\BaseEntitiesMappingHelper.cs" />
+    <Compile Include="UserBetDtoBuilder\Base\BaseUserBetDtoBuilder.cs" />
+    <Compile Include="UserBetDtoBuilder\Base\IBaseUserBetDtoBuilder.cs" />
+    <Compile Include="UserBetDtoBuilder\Base\FeatureSpecific\IPendingUserBetDtoBuilder.cs" />
+    <Compile Include="UserBetDtoBuilder\Brands\ItUserBetDtoBuilder.cs" />
+    <Compile Include="UserBetDtoBuilder\Brands\UserBetDtoBuilder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConsoleApplication2\Sport.Core.csproj">
+      <Project>{F83B02DC-6E29-402B-B23A-301543AA7852}</Project>
+      <Name>Sport.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sport.Common\Sport.Common.csproj">
+      <Project>{5D22D6A1-AC9E-4E9D-B2AA-B381A5BBEABE}</Project>
+      <Name>Sport.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sport.Data\Sport.Data.csproj">
+      <Project>{62F50C51-FFC6-4C78-AEE4-D5DD9C82417F}</Project>
+      <Name>Sport.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

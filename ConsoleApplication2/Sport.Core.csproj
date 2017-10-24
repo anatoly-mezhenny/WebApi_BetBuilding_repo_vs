@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F83B02DC-6E29-402B-B23A-301543AA7852}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleApplication2</RootNamespace>
+    <AssemblyName>ConsoleApplication2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Bet\Base\Subentities\BaseRegulatorInfo.cs" />
+    <Compile Include="Entities\Bet\Base\Subentities\IHaveRegulatorInfo.cs" />
+    <Compile Include="Entities\Bet\Base\Subentities\IHaveTaxInfo.cs" />
+    <Compile Include="Entities\Bet\Italy\Subentities\ItRegulatorInfo.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BetInfoProviders\Base\BaseUniversalRegulatorInfoProvider.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BetInfoProviders\Base\Generic\IBaseBetListInfoProvider.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BetInfoProviders\Base\Generic\IBaseBetRangingResultInfoProvider.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BetInfoProviders\Base\Generic\IBaseSingleBetListInfoProvider.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BetInfoProviders\Base\Generic\IBaseUniversalInfoProvider.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BetInfoProviders\Default\IUniversalTaxInfoProvider.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BetInfoProviders\Italy\IItUniversalRegulatorInfoProvider.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BetInfoProviders\Italy\ItUniversalRegulatorInfoProvider.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BetInfoProviders\Default\UniversalTaxInfoProvider.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BetInfoProviders\Italy\IItUniversalTaxInfoProvider.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BetInfoProviders\Italy\ItUniversalTaxInfoProvider.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BuilderDirectors\Base\AsyncBaseBetBuildDirector.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BuilderDirectors\Base\Generic\BaseConstructionParametersType.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BuilderDirectors\Base\Generic\GenericBetBuildDirector.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\BaseBetBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\BetList\BaseOngoingCashoutableBetsListBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\BetList\BaseSimpleBetsListBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\BetList\Generic\BaseBetListBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\BetRangingResult\BaseEndedBetRangingResultBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\BetRangingResult\EndedStakesFilters.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\BetRangingResult\Generic\BaseBetRangingResultBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\BetRangingResult\Generic\IBaseBetRangingResultBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\SingleBet\BaseSimpleBetBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\SingleBet\Generic\BaseSingleBetBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\IBaseBetBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\BetList\Generic\IBaseBetListBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\SingleBet\Generic\IBaseSingleBetBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Italy\IItPendingBetsListBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Italy\ItPendingBetsListBuilder.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\BetList\BaseOngoingBetsListBuilder.cs" />
+    <Compile Include="Entities\Bet\Base\Subentities\BaseTaxInfo.cs" />
+    <Compile Include="Entities\Bet\Base\BaseUnifiedBet.cs" />
+    <Compile Include="Entities\Bet\Base\BaseUnifiedBetSelection.cs" />
+    <Compile Include="Entities\Bet\Italy\Subentities\ItTaxInfo.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BuilderDirectors\Base\BaseBetBuildDirector.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BetInfoProviders\Base\BaseUniversalTaxInfoProvider.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\BetInfoProviders\Base\Generic\IBaseInfoProvider.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Factories\BetBuilderFactories\Base\IBaseBetBuilderFactory.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Factories\BetBuilderFactories\Default\BetBuilderFactory.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Factories\BetBuilderFactories\Default\IBetBuilderFactory.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Factories\BetBuilderFactories\Italy\IItBetBuilderFactory.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Factories\BetBuilderFactories\Base\BaseBetBuilderFactory.cs" />
+    <Compile Include="Entities\CashoutableBetLightInfo.cs" />
+    <Compile Include="EntityConstruction\UnifiedBet\Factories\BetBuilderFactories\Italy\ItBetBuilderFactory.cs" />
+    <Compile Include="Services\MultiTenantCashOutService\IMultiTenantCashOutService.cs" />
+    <Compile Include="Services\MultitenantUnifiedBetService\Italy\IItMultitenantUnifiedBetService.cs" />
+    <Compile Include="Entities\Bet\Italy\ItUnifiedBet.cs" />
+    <Compile Include="Services\MultitenantUnifiedBetService\Base\BaseMultitenantUnifiedBetService.cs" />
+    <Compile Include="Services\MultitenantUnifiedBetService\Base\IBaseMultitenantUnifiedBetService.cs" />
+    <Compile Include="Services\MultitenantUnifiedBetService\Italy\ItMultitenantUnifiedBetService.cs" />
+    <Compile Include="Entities\Bet\Italy\ItUnifiedBetSelection.cs" />
+    <Compile Include="Entities\Bet\Default\Subentities\TaxInfo.cs" />
+    <Compile Include="Services\MultitenantUnifiedBetService\Default\IMultitenantUnifiedBetService.cs" />
+    <Compile Include="Services\MultitenantUnifiedBetService\Default\MultitenantUnifiedBetService.cs" />
+    <Compile Include="Entities\Bet\Default\UnifiedBet.cs" />
+    <Compile Include="Entities\Bet\Default\UnifiedBetSelection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\TaxService\ITaxService.cs" />
+    <Compile Include="Services\TaxService\TaxService.cs" />
+    <Compile Include="Utilities\Mappers\Bet\Base\BaseBetMapper.cs" />
+    <Compile Include="Utilities\Mappers\Bet\Base\BaseBetSelectionMapper.cs" />
+    <Compile Include="Utilities\Mappers\Bet\Base\IBaseBetMapper.cs" />
+    <Compile Include="Utilities\Mappers\Bet\Base\IBaseBetSelectionMapper.cs" />
+    <Compile Include="Utilities\Mappers\Bet\Default\BetMapper.cs" />
+    <Compile Include="Utilities\Mappers\Bet\Default\BetSelectionMapper.cs" />
+    <Compile Include="Utilities\Mappers\Bet\Default\IBetMapper.cs" />
+    <Compile Include="Utilities\Mappers\Bet\Default\IBetSelectionMapper.cs" />
+    <Compile Include="Utilities\Mappers\Bet\Italy\IItBetMapper.cs" />
+    <Compile Include="Utilities\Mappers\Bet\Italy\IItBetSelectionMapper.cs" />
+    <Compile Include="Utilities\Mappers\Bet\Italy\ItBetMapper.cs" />
+    <Compile Include="Utilities\Mappers\Bet\Italy\ItBetSelectionMapper.cs" />
+    <Compile Include="Utilities\Mappers\EndedStakesFiltersHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sport.Common\Sport.Common.csproj">
+      <Project>{5D22D6A1-AC9E-4E9D-B2AA-B381A5BBEABE}</Project>
+      <Name>Sport.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Sport.Data\Sport.Data.csproj">
+      <Project>{62F50C51-FFC6-4C78-AEE4-D5DD9C82417F}</Project>
+      <Name>Sport.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

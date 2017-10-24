@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ConsoleApplication2.Entities.Bet.Base.BaseUnifiedBet" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACSAAAAAAAAAgAAAwAAACCAAACAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Entities\Bet\Base\BaseUnifiedBet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication2.Entities.Bet.Base.BaseUnifiedBet&lt;TUnifiedBetSelection&gt;" Collapsed="true">
+    <Position X="1" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Entities\Bet\Base\BaseUnifiedBet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication2.Entities.Bet.Default.UnifiedBet">
+    <Position X="0.5" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAQAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Bet\Default\UnifiedBet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleApplication2.Entities.Bet.Italy.ItUnifiedBet" Collapsed="true">
+    <Position X="3" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAgAAAAAAAAAQCAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Bet\Italy\ItUnifiedBet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ConsoleApplication2.Entities.Bet.Base.BaseUnifiedBetSelection" Collapsed="true">
+    <Position X="6.5" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Bet\Base\BaseUnifiedBetSelection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication2.Entities.Bet.Default.UnifiedBetSelection" Collapsed="true">
+    <Position X="5.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Bet\Default\UnifiedBetSelection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConsoleApplication2.Entities.Bet.Italy.ItUnifiedBetSelection" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Bet\Italy\ItUnifiedBetSelection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
