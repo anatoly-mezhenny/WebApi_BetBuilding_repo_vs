@@ -8,46 +8,6 @@ namespace Sport.Data.Repositories.BetRepository.Italy
 {
     public class ItBetRepository : BaseBetRepository<ItBetMainInfo>, IItBetRepository
     {
-        public override ItBetMainInfo GetPreliveBet(int userId, int betId)
-        {
-            return new ItBetMainInfo
-            {
-                Id = 1,
-                CommonPropertyForAllBrands = "CommonPropVal1 for prelive bet",
-                ItSpecificProperty = "ItPropVal1 for prelive bet",
-                SogeiTicket = "SogeiTicket1 for prelive bet",
-                BetSelectionMainInfo = new List<ItBetSelectionMainInfo>
-                {
-                    new ItBetSelectionMainInfo
-                    {
-                        Id = 1,
-                        CommonBetSelectionProperty = "CommonPropVal1 for prelive bet",
-                        ItSpecificInfo = "ItPropVal1 for prelive bet"
-                    }
-                }
-            };
-        }
-
-        public override ItBetMainInfo GetLiveBet(int userId, int betId)
-        {
-            return new ItBetMainInfo
-            {
-                Id = 2,
-                CommonPropertyForAllBrands = "CommonPropVal1 for live bet",
-                ItSpecificProperty = "ItPropVal1 for live bet",
-                SogeiTicket = "SogeiTicket1 for live bet",
-                BetSelectionMainInfo = new List<ItBetSelectionMainInfo>
-                {
-                    new ItBetSelectionMainInfo
-                    {
-                        Id = 2,
-                        CommonBetSelectionProperty = "CommonPropVal1 for live bet",
-                        ItSpecificInfo = "ItPropVal1 for live bet"
-                    }
-                }
-            };
-        }
-
         IEnumerable<BaseBetMainInfo> IBaseBetRepository.GetOngoingBets(int userId, bool onlyCashoutableBets, bool getPrelive = true, bool getLive = true)
         {
             return GetOngoingBets(userId, onlyCashoutableBets);
@@ -141,6 +101,7 @@ namespace Sport.Data.Repositories.BetRepository.Italy
             var rr = new RangingResult<ItBetMainInfo>(1, lst.Count, lst.Count, lst, lst.Count);
             return rr;
         }
+
         public IEnumerable<ItBetMainInfo> GetPendingBets(int userId, bool onlyCashoutableStakes = false, bool getPrelive = true, bool getLive = true)
         {
             //get UnifiedBet by default-specific way or use base
@@ -182,14 +143,90 @@ namespace Sport.Data.Repositories.BetRepository.Italy
             return lst;
         }
 
+        public override ItBetMainInfo GetPreliveBet(int userId, int betId)
+        {
+            return new ItBetMainInfo
+            {
+                Id = 1,
+                CommonPropertyForAllBrands = "CommonPropVal1 for prelive bet",
+                ItSpecificProperty = "ItPropVal1 for prelive bet",
+                SogeiTicket = "SogeiTicket1 for prelive bet",
+                BetSelectionMainInfo = new List<ItBetSelectionMainInfo>
+                {
+                    new ItBetSelectionMainInfo
+                    {
+                        Id = 1,
+                        CommonBetSelectionProperty = "CommonPropVal1 for prelive bet",
+                        ItSpecificInfo = "ItPropVal1 for prelive bet"
+                    }
+                }
+            };
+        }
+
         public override IEnumerable<ItBetMainInfo> GetPreliveBets(int userId)
         {
-            throw new System.NotImplementedException();
+            return new[]
+            {
+                new ItBetMainInfo
+                {
+                    Id = 1,
+                    CommonPropertyForAllBrands = "CommonPropVal1 for prelive bet",
+                    ItSpecificProperty = "ItPropVal1 for prelive bet",
+                    SogeiTicket = "SogeiTicket1 for prelive bet",
+                    BetSelectionMainInfo = new List<ItBetSelectionMainInfo>
+                    {
+                        new ItBetSelectionMainInfo
+                        {
+                            Id = 1,
+                            CommonBetSelectionProperty = "CommonPropVal1 for prelive bet",
+                            ItSpecificInfo = "ItPropVal1 for prelive bet"
+                        }
+                    }
+                }
+            };
+        }
+
+        public override ItBetMainInfo GetLiveBet(int userId, int betId)
+        {
+            return new ItBetMainInfo
+            {
+                Id = 2,
+                CommonPropertyForAllBrands = "CommonPropVal1 for live bet",
+                ItSpecificProperty = "ItPropVal1 for live bet",
+                SogeiTicket = "SogeiTicket1 for live bet",
+                BetSelectionMainInfo = new List<ItBetSelectionMainInfo>
+                {
+                    new ItBetSelectionMainInfo
+                    {
+                        Id = 2,
+                        CommonBetSelectionProperty = "CommonPropVal1 for live bet",
+                        ItSpecificInfo = "ItPropVal1 for live bet"
+                    }
+                }
+            };
         }
 
         public override IEnumerable<ItBetMainInfo> GetLiveBets(int userId)
         {
-            throw new System.NotImplementedException();
+            return new[]
+            {
+                new ItBetMainInfo
+                {
+                    Id = 2,
+                    CommonPropertyForAllBrands = "CommonPropVal1 for live bet",
+                    ItSpecificProperty = "ItPropVal1 for live bet",
+                    SogeiTicket = "SogeiTicket1 for live bet",
+                    BetSelectionMainInfo = new List<ItBetSelectionMainInfo>
+                    {
+                        new ItBetSelectionMainInfo
+                        {
+                            Id = 2,
+                            CommonBetSelectionProperty = "CommonPropVal1 for live bet",
+                            ItSpecificInfo = "ItPropVal1 for live bet"
+                        }
+                    }
+                }
+            };
         }
     }
 }

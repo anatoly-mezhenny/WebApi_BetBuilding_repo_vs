@@ -89,25 +89,6 @@ namespace Sport.Data.Repositories.BetRepository.Default
             return new RangingResult<BetMainInfo>(endedStakesFilters.StartIndex, endedStakesFilters.LastIndex, total, lst, lst.Count);
         }
 
-        public override BetMainInfo GetLiveBet(int userId, int betId)
-        {
-            return new BetMainInfo
-            {
-                Id = 7,
-                CommonPropertyForAllBrands = "CommonPropVal1 for live bet",
-                DefaultSpecificProperty = "DefPropVal1 for live  bet",
-                BetSelectionMainInfo = new List<BetSelectionMainInfo>
-                {
-                    new BetSelectionMainInfo
-                    {
-                        Id = 8,
-                        CommonBetSelectionProperty = "CommonPropVal1 for live bet",
-                        DefaultSpecificProperty = "DefPropVal1 for live  bet"
-                    }
-                }
-            };
-        }
-
         public override BetMainInfo GetPreliveBet(int userId, int betId)
         {
             return new BetMainInfo
@@ -129,12 +110,65 @@ namespace Sport.Data.Repositories.BetRepository.Default
 
         public override IEnumerable<BetMainInfo> GetPreliveBets(int userId)
         {
-            throw new NotImplementedException();
+            return new[]
+            {
+                new BetMainInfo
+                {
+                    Id = 9,
+                    CommonPropertyForAllBrands = "CommonPropVal1 for prelive bet",
+                    DefaultSpecificProperty = "DefPropVal1 for prelive bet",
+                    BetSelectionMainInfo = new List<BetSelectionMainInfo>
+                    {
+                        new BetSelectionMainInfo
+                        {
+                            Id = 10,
+                            CommonBetSelectionProperty = "CommonPropVal1 for prelive bet",
+                            DefaultSpecificProperty = "DefPropVal1 for prelive bet"
+                        }
+                    }
+                }
+            };
+        }
+
+        public override BetMainInfo GetLiveBet(int userId, int betId)
+        {
+            return new BetMainInfo
+            {
+                Id = 7,
+                CommonPropertyForAllBrands = "CommonPropVal1 for live bet",
+                DefaultSpecificProperty = "DefPropVal1 for live  bet",
+                BetSelectionMainInfo = new List<BetSelectionMainInfo>
+                {
+                    new BetSelectionMainInfo
+                    {
+                        Id = 8,
+                        CommonBetSelectionProperty = "CommonPropVal1 for live bet",
+                        DefaultSpecificProperty = "DefPropVal1 for live  bet"
+                    }
+                }
+            };
         }
 
         public override IEnumerable<BetMainInfo> GetLiveBets(int userId)
         {
-            throw new NotImplementedException();
+            return new[]
+            {
+                new BetMainInfo
+                {
+                    Id = 7,
+                    CommonPropertyForAllBrands = "CommonPropVal1 for live bet",
+                    DefaultSpecificProperty = "DefPropVal1 for live  bet",
+                    BetSelectionMainInfo = new List<BetSelectionMainInfo>
+                    {
+                        new BetSelectionMainInfo
+                        {
+                            Id = 8,
+                            CommonBetSelectionProperty = "CommonPropVal1 for live bet",
+                            DefaultSpecificProperty = "DefPropVal1 for live  bet"
+                        }
+                    }
+                }
+            };
         }
     }
 }
