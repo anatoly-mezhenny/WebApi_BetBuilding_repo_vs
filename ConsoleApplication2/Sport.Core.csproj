@@ -67,7 +67,6 @@
     <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\BetRangingResult\Generic\BaseBetRangingResultBuilder.cs" />
     <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\BetRangingResult\Generic\IBaseBetRangingResultBuilder.cs" />
     <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\SingleBet\BaseSimpleBetBuilder.cs" />
-    <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\SingleBet\BaseSimpleBetBuilder2.cs" />
     <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\SingleBet\Generic\BaseSingleBetBuilder.cs" />
     <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\IBaseBetBuilder.cs" />
     <Compile Include="EntityConstruction\UnifiedBet\Builders\BetBuilder\Base\SpecificBase\BetList\Generic\IBaseBetListBuilder.cs" />
